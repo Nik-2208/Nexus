@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 14px;
+      background: #fcfbf9;
+      color: #18181b;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e7e5e0;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .badge {
+      font-size: 10px;
+      background: #eff6ff;
+      color: #2563eb;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e7e5e0;
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .btn {
+      width: 100%;
+      background: #18181b;
+      color: #ffffff;
+      border: none;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 6px;
+    }
+    .btn-secondary {
+      background: #f4f4f5;
+      color: #27272a;
+      border: 1px solid #e4e4e7;
+    }
+    input {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid #d4d4d8;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">NEXUS Companion</div>
+    <div class="badge" id="statusBadge">Checking...</div>
+  </div>
+
+  <div id="pairingSection" class="card" style="display: none;">
+    <div style="font-weight: 600; margin-bottom: 4px;">Pair with Local NEXUS</div>
+    <div style="color: #71717a; font-size: 11px; margin-bottom: 8px;">Enter the 8-character pairing code from the NEXUS web dashboard:</div>
+    <input type="text" id="pairingCodeInput" placeholder="e.g. 9B3C2A1E">
+    <button class="btn" id="btnPair">Pair Extension</button>
+  </div>
+
+  <div id="mainSection" class="card">
+    <div class="status-row">
+      <span style="color: #71717a;">Current Tab:</span>
+      <strong id="currentTabProvider">Detecting...</strong>
+    </div>
+    <div class="status-row">
+      <span style="color: #71717a;">Monitoring:</span>
+      <strong id="monitoringStatus" style="color: #059669;">Active</strong>
+    </div>
+  </div>
+
+  <button class="btn" id="btnCapture">📥 Capture Selected Text</button>
+  <button class="btn btn-secondary" id="btnOpenDashboard">Open NEXUS Dashboard</button>
+  <button class="btn btn-secondary" id="btnToggleMonitoring">Pause Monitoring</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+# Environment and Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+
+# Model files and weights
+*.gguf
+*.bin
+*.pt
+*.safetensors
+*.onnx
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Local databases and application storage
+nexus_data/
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.db-wal
+*.db-shm
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# OS and IDE temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.tmp
+
+*.exe
